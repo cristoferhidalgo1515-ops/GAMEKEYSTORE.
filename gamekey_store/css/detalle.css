@@ -1,0 +1,548 @@
+/* =========================================
+   DETALLE DEL VIDEOJUEGO
+========================================= */
+
+.pagina-detalle {
+    min-height: 100vh;
+
+    padding: 30px 7% 60px;
+
+    background:
+        radial-gradient(
+            circle at top right,
+            rgba(164, 61, 255, 0.12),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at bottom left,
+            rgba(21, 156, 255, 0.08),
+            transparent 35%
+        );
+}
+
+
+/* =========================================
+   VOLVER AL CATÁLOGO
+========================================= */
+
+.zona-volver {
+    margin-bottom: 25px;
+}
+
+.volver-catalogo {
+    color: var(--texto-suave);
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+.volver-catalogo:hover {
+    color: var(--rosado);
+}
+
+
+/* =========================================
+   CONTENEDOR PRINCIPAL
+========================================= */
+
+.detalle-producto {
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(280px, 420px)
+        minmax(0, 1fr);
+
+    gap: 45px;
+
+    align-items: start;
+}
+
+
+/* =========================================
+   PORTADA
+========================================= */
+
+.detalle-portada {
+    width: 100%;
+
+    overflow: hidden;
+
+    border: 1px solid var(--borde);
+
+    border-radius: 12px;
+
+    background: var(--tarjeta);
+
+    box-shadow:
+        0 15px 40px
+        rgba(0, 0, 0, 0.35);
+}
+
+.detalle-portada img {
+    width: 100%;
+    height: 560px;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+
+/* =========================================
+   INFORMACIÓN
+========================================= */
+
+.detalle-informacion {
+    padding: 10px 0;
+}
+
+.etiquetas-detalle {
+    margin-bottom: 17px;
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 9px;
+}
+
+.etiquetas-detalle span {
+    padding: 7px 11px;
+
+    background:
+        rgba(164, 61, 255, 0.12);
+
+    border:
+        1px solid
+        rgba(164, 61, 255, 0.5);
+
+    border-radius: 5px;
+
+    color: #d9bfff;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    text-transform: uppercase;
+}
+
+.detalle-informacion h1 {
+    margin-bottom: 12px;
+
+    font-size:
+        clamp(33px, 5vw, 55px);
+
+    line-height: 1.05;
+}
+
+
+/* =========================================
+   ESTRELLAS
+========================================= */
+
+.estrellas {
+    margin-bottom: 22px;
+
+    color: #ffd84d;
+
+    font-size: 17px;
+
+    letter-spacing: 2px;
+}
+
+.estrellas span {
+    margin-left: 8px;
+
+    color: var(--texto-suave);
+
+    font-size: 13px;
+
+    letter-spacing: normal;
+}
+
+
+/* =========================================
+   DESCRIPCIÓN
+========================================= */
+
+.descripcion-detalle {
+    max-width: 720px;
+
+    margin-bottom: 27px;
+
+    color: var(--texto-suave);
+
+    font-size: 15px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   DATOS DEL JUEGO
+========================================= */
+
+.informacion-extra {
+    margin-bottom: 25px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 12px;
+}
+
+.informacion-extra div {
+    padding: 14px;
+
+    background:
+        rgba(13, 16, 27, 0.8);
+
+    border:
+        1px solid var(--borde);
+
+    border-radius: 7px;
+}
+
+.titulo-dato {
+    margin-bottom: 6px;
+
+    display: block;
+
+    color: var(--texto-suave);
+
+    font-size: 11px;
+
+    text-transform: uppercase;
+}
+
+.informacion-extra strong {
+    font-size: 14px;
+}
+
+
+/* =========================================
+   DISPONIBILIDAD
+========================================= */
+
+.disponibilidad {
+    margin-bottom: 22px;
+
+    padding: 12px 14px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    background:
+        rgba(22, 138, 72, 0.08);
+
+    border:
+        1px solid
+        rgba(22, 138, 72, 0.4);
+
+    border-radius: 6px;
+
+    color: #63df96;
+
+    font-size: 13px;
+}
+
+.disponibilidad strong {
+    margin-left: auto;
+
+    color: white;
+}
+
+.punto-disponible {
+    width: 8px;
+    height: 8px;
+
+    display: inline-block;
+
+    background: #30d875;
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 8px #30d875;
+}
+
+
+/* =========================================
+   PRECIO
+========================================= */
+
+.zona-precio {
+    margin-bottom: 22px;
+}
+
+.zona-precio span {
+    color: var(--texto-suave);
+
+    font-size: 12px;
+}
+
+.zona-precio h2 {
+    margin-top: 3px;
+
+    color: white;
+
+    font-size: 35px;
+}
+
+
+/* =========================================
+   CANTIDAD
+========================================= */
+
+.zona-cantidad {
+    margin-bottom: 20px;
+}
+
+.zona-cantidad label {
+    margin-bottom: 8px;
+
+    display: block;
+
+    color: var(--texto-suave);
+
+    font-size: 13px;
+}
+
+.control-cantidad {
+    width: 145px;
+
+    display: grid;
+
+    grid-template-columns:
+        40px 65px 40px;
+
+    border:
+        1px solid var(--borde);
+
+    border-radius: 6px;
+
+    overflow: hidden;
+}
+
+.control-cantidad button {
+    border: none;
+
+    background: #121522;
+
+    color: white;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.control-cantidad button:hover {
+    background: var(--morado);
+}
+
+.control-cantidad input {
+    width: 100%;
+
+    height: 42px;
+
+    border: none;
+
+    border-left:
+        1px solid var(--borde);
+
+    border-right:
+        1px solid var(--borde);
+
+    background: #080a13;
+
+    color: white;
+
+    text-align: center;
+
+    outline: none;
+}
+
+
+/* =========================================
+   BOTÓN DE COMPRA
+========================================= */
+
+.boton-agregar-detalle {
+    width: 100%;
+
+    max-width: 420px;
+
+    padding: 15px 20px;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--morado),
+            var(--rosado)
+        );
+
+    border: none;
+
+    border-radius: 6px;
+
+    color: white;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.boton-agregar-detalle:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 0 22px
+        rgba(255, 25, 200, 0.35);
+}
+
+.mensaje-compra {
+    max-width: 420px;
+
+    margin-top: 10px;
+
+    color: var(--texto-suave);
+
+    font-size: 11px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   INFORMACIÓN INFERIOR
+========================================= */
+
+.seccion-inferior {
+    max-width: 1200px;
+
+    margin:
+        55px auto 0;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 18px;
+}
+
+.tarjeta-info {
+    padding: 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    background: var(--tarjeta);
+
+    border:
+        1px solid var(--borde);
+
+    border-radius: 8px;
+}
+
+.tarjeta-info > span {
+    font-size: 28px;
+}
+
+.tarjeta-info h3 {
+    margin-bottom: 6px;
+
+    font-size: 14px;
+}
+
+.tarjeta-info p {
+    color: var(--texto-suave);
+
+    font-size: 12px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .detalle-producto {
+        grid-template-columns:
+            300px minmax(0, 1fr);
+
+        gap: 28px;
+    }
+
+    .detalle-portada img {
+        height: 440px;
+    }
+
+    .seccion-inferior {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* =========================================
+   TELÉFONO
+========================================= */
+
+@media (max-width: 700px) {
+
+    .pagina-detalle {
+        padding:
+            25px 5% 45px;
+    }
+
+    .detalle-producto {
+        grid-template-columns: 1fr;
+    }
+
+    .detalle-portada {
+        max-width: 360px;
+
+        margin: 0 auto;
+    }
+
+    .detalle-portada img {
+        height: 480px;
+    }
+
+    .detalle-informacion h1 {
+        font-size: 34px;
+    }
+
+    .informacion-extra {
+        grid-template-columns: 1fr;
+    }
+
+    .boton-agregar-detalle {
+        max-width: none;
+    }
+
+}

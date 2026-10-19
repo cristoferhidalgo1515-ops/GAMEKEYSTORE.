@@ -1,0 +1,239 @@
+.boton-volver {
+    padding: 10px 16px;
+    border: 1px solid #5868ff;
+    border-radius: 8px;
+    color: #aeb5ff;
+    text-decoration: none;
+    background: rgba(88, 104, 255, 0.1);
+}
+
+.boton-volver:hover {
+    background: rgba(88, 104, 255, 0.2);
+}
+
+.panel-usuarios {
+    padding: 25px;
+    border: 1px solid #30263f;
+    border-radius: 15px;
+    background: rgba(12, 12, 21, 0.95);
+}
+
+.formulario-busqueda {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 24px;
+}
+
+.formulario-busqueda input {
+    flex: 1;
+    min-width: 200px;
+    padding: 12px 14px;
+    border: 1px solid #36364a;
+    border-radius: 8px;
+    outline: none;
+    background: #11111b;
+    color: white;
+}
+
+.formulario-busqueda input:focus {
+    border-color: #ff2fc3;
+}
+
+.formulario-busqueda button,
+.formulario-busqueda a {
+    padding: 12px 18px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.formulario-busqueda button {
+    background: linear-gradient(90deg, #df1cad, #5366ff);
+}
+
+.formulario-busqueda a {
+    background: #292936;
+}
+
+.tabla-contenedor {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    min-width: 1050px;
+    border-collapse: collapse;
+}
+
+thead {
+    background: #171724;
+}
+
+th,
+td {
+    padding: 14px 12px;
+    border-bottom: 1px solid #29293a;
+    text-align: left;
+}
+
+th {
+    color: #d8d8e5;
+    font-size: 14px;
+}
+
+td {
+    color: #bcbccc;
+    font-size: 14px;
+}
+
+tbody tr:hover {
+    background: rgba(255, 47, 195, 0.04);
+}
+
+.rol,
+.estado {
+    display: inline-block;
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.rol-administrador {
+    color: #ff62d0;
+    background: rgba(255, 47, 195, 0.13);
+}
+
+.rol-cliente {
+    color: #64b4ff;
+    background: rgba(36, 143, 255, 0.13);
+}
+
+.rol-empleado {
+    color: #e8c45f;
+    background: rgba(232, 196, 95, 0.13);
+}
+
+.estado-activo {
+    color: #62e6a1;
+    background: rgba(33, 190, 112, 0.13);
+}
+
+.estado-inactivo {
+    color: #ff7c92;
+    background: rgba(255, 70, 100, 0.13);
+}
+
+.acciones {
+    white-space: nowrap;
+}
+
+.boton-editar,
+.boton-estado {
+    display: inline-block;
+    padding: 7px 10px;
+    margin-right: 5px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.boton-editar {
+    color: white;
+    background: #4c63db;
+}
+
+.boton-estado {
+    color: white;
+    background: #b92d58;
+}
+
+.cuenta-actual {
+    color: #8f8fa2;
+    font-size: 12px;
+}
+
+.mensaje-resultado {
+    margin-bottom: 20px;
+    padding: 12px;
+    border: 1px solid #3fbd83;
+    border-radius: 8px;
+    background: rgba(63, 189, 131, 0.1);
+    color: #9bf0c5;
+}
+
+.sin-resultados {
+    padding: 30px;
+    text-align: center;
+    color: #888899;
+}
+
+@media (max-width: 720px) {
+    .formulario-busqueda {
+        flex-direction: column;
+    }
+
+    .formulario-busqueda button,
+    .formulario-busqueda a {
+        text-align: center;
+    }
+}
+
+.formulario-eliminar {
+    display: inline-block;
+    margin: 0;
+}
+
+.boton-eliminar {
+    padding: 7px 10px;
+    border: none;
+    border-radius: 6px;
+    background: #7e253d;
+    color: white;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.boton-eliminar:hover {
+    background: #a82d4d;
+}
+
+.acciones {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.acciones-encabezado {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.boton-nuevo {
+    padding: 10px 16px;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #df1cad, #5366ff);
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.boton-nuevo:hover {
+    box-shadow: 0 0 14px rgba(223, 28, 173, 0.35);
+}
+
+@media (max-width: 720px) {
+    .acciones-encabezado {
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .acciones-encabezado a {
+        text-align: center;
+    }
+}

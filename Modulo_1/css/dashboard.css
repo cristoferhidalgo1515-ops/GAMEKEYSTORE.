@@ -1,0 +1,1089 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    background: #07070d;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* ==================================================
+   CONTENEDOR PRINCIPAL
+================================================== */
+
+.contenedor {
+    min-height: 100vh;
+}
+
+/* ==================================================
+   MENÚ LATERAL FIJO
+================================================== */
+
+.menu-lateral {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 250px;
+    height: 100vh;
+
+    padding: 25px 18px;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    background:
+        linear-gradient(
+            rgba(9, 9, 17, 0.98),
+            rgba(15, 7, 24, 0.98)
+        );
+
+    border-right: 1px solid #31223f;
+
+    z-index: 1000;
+}
+
+/* Barra vertical del menú */
+
+.menu-lateral::-webkit-scrollbar {
+    width: 5px;
+}
+
+.menu-lateral::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.menu-lateral::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: rgba(255, 47, 195, 0.3);
+}
+
+.menu-lateral::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 47, 195, 0.5);
+}
+
+/* ==================================================
+   LOGO
+================================================== */
+
+.logo {
+    flex-shrink: 0;
+
+    margin-bottom: 35px;
+
+    text-align: center;
+}
+
+.logo span {
+    display: block;
+
+    margin-bottom: 5px;
+
+    font-size: 45px;
+}
+
+.logo h2 {
+    color: #ff2fc3;
+
+    letter-spacing: 2px;
+}
+
+.logo p {
+    color: #6887ff;
+
+    font-size: 13px;
+    letter-spacing: 5px;
+}
+
+/* ==================================================
+   NAVEGACIÓN
+================================================== */
+
+.navegacion {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.menu-lateral nav a {
+    width: 100%;
+
+    padding: 13px 15px;
+
+    border: 1px solid transparent;
+    border-radius: 8px;
+
+    color: #dedee8;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+.menu-lateral nav a:hover {
+    background: rgba(255, 47, 195, 0.13);
+
+    color: #ff50ca;
+
+    transform: translateX(4px);
+}
+
+/* Página activa */
+
+.menu-lateral nav a.activo {
+    border-color: rgba(255, 47, 195, 0.28);
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(255, 47, 195, 0.19),
+            rgba(79, 100, 255, 0.12)
+        );
+
+    color: #ff5acf;
+
+    box-shadow:
+        inset 3px 0 0 #ff2fc3,
+        0 0 15px rgba(255, 47, 195, 0.07);
+}
+
+/* Enlaces pendientes */
+
+.enlace-pendiente {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* ==================================================
+   CONTENIDO DERECHO
+================================================== */
+
+.contenido {
+    width: calc(100% - 250px);
+    min-height: 100vh;
+
+    margin-left: 250px;
+    padding: 35px;
+
+    overflow-x: hidden;
+
+    background:
+        radial-gradient(
+            circle at top right,
+            #1e0d3b,
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at bottom left,
+            #001d36,
+            transparent 35%
+        ),
+        #07070d;
+}
+
+/* ==================================================
+   ENCABEZADO
+================================================== */
+
+.encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.encabezado h1 {
+    margin-bottom: 6px;
+
+    font-size: 32px;
+}
+
+.encabezado p {
+    color: #aaaabd;
+}
+
+.usuario {
+    padding: 10px 16px;
+
+    border: 1px solid #ff2fc3;
+    border-radius: 20px;
+
+    background: rgba(255, 47, 195, 0.08);
+
+    color: #ff58ce;
+}
+
+/* ==================================================
+   TARJETAS PRINCIPALES
+================================================== */
+
+.tarjetas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.tarjeta {
+    padding: 24px;
+
+    border: 1px solid #28283a;
+    border-radius: 14px;
+
+    background: rgba(15, 15, 27, 0.95);
+
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+
+    transition: 0.25s;
+}
+
+.tarjeta:hover {
+    border-color: rgba(255, 47, 195, 0.25);
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.3),
+        0 0 18px rgba(255, 47, 195, 0.06);
+}
+
+.tarjeta span {
+    color: #a8a8b7;
+}
+
+.tarjeta strong {
+    display: block;
+
+    margin: 12px 0;
+
+    color: #ff3cc6;
+
+    font-size: 38px;
+}
+
+.tarjeta p {
+    color: #79798b;
+
+    font-size: 14px;
+}
+
+/* ==================================================
+   PANELES
+================================================== */
+
+.panel-bienvenida {
+    margin-bottom: 25px;
+    padding: 30px;
+
+    border: 1px solid #30263f;
+    border-radius: 15px;
+
+    background: rgba(12, 12, 21, 0.94);
+
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.16);
+}
+
+.panel-bienvenida:last-child {
+    margin-bottom: 0;
+}
+
+.panel-bienvenida h2 {
+    margin-bottom: 10px;
+
+    color: #ff39c4;
+}
+
+.panel-bienvenida > p {
+    margin-bottom: 25px;
+
+    color: #b4b4c3;
+}
+
+/* ==================================================
+   MÓDULOS
+================================================== */
+
+.modulos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 18px;
+}
+
+.modulo {
+    padding: 20px;
+
+    border: 1px solid #28283b;
+    border-radius: 12px;
+
+    background: #11111c;
+
+    transition: 0.25s;
+}
+
+.modulo:hover {
+    border-color: rgba(83, 102, 255, 0.3);
+
+    transform: translateY(-2px);
+}
+
+.modulo h3 {
+    margin-bottom: 10px;
+}
+
+.modulo p {
+    min-height: 50px;
+
+    margin-bottom: 18px;
+
+    color: #9696a7;
+
+    line-height: 1.5;
+}
+
+.modulo a {
+    display: inline-block;
+
+    padding: 9px 15px;
+
+    border-radius: 7px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #dc1da9,
+            #4f64ff
+        );
+
+    color: white;
+
+    text-decoration: none;
+
+    transition: 0.25s;
+}
+
+.modulo a:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 6px 15px rgba(220, 29, 169, 0.18);
+}
+
+.modulo a.desactivado {
+    background: #292935;
+
+    color: #8f8f9d;
+
+    pointer-events: none;
+}
+
+/* ==================================================
+   ZONA DE CUENTA
+================================================== */
+
+.zona-cuenta {
+    position: relative;
+
+    width: 100%;
+    flex-shrink: 0;
+
+    margin-top: auto;
+    padding-top: 14px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* ==================================================
+   BOTÓN DE CUENTA
+================================================== */
+
+.boton-cuenta {
+    width: 100%;
+    max-width: 100%;
+
+    padding: 10px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 11px;
+
+    border: 1px solid transparent;
+    border-radius: 12px;
+
+    background: transparent;
+
+    color: white;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    overflow: hidden;
+
+    transition: 0.25s;
+}
+
+.boton-cuenta:hover {
+    border-color: rgba(223, 28, 173, 0.35);
+
+    background: rgba(223, 28, 173, 0.09);
+}
+
+/* ==================================================
+   AVATAR
+================================================== */
+
+.cuenta-avatar {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #df1cad,
+            #5366ff
+        );
+
+    color: white;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    box-shadow:
+        0 0 14px rgba(223, 28, 173, 0.25);
+}
+
+.cuenta-avatar.grande {
+    width: 46px;
+    height: 46px;
+    min-width: 46px;
+}
+
+/* ==================================================
+   INFORMACIÓN DE CUENTA
+================================================== */
+
+.cuenta-informacion {
+    min-width: 0;
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+}
+
+.cuenta-informacion strong {
+    display: block;
+
+    width: 100%;
+    max-width: 100%;
+
+    overflow: hidden;
+
+    color: #ffffff;
+
+    font-size: 13px;
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.cuenta-informacion span {
+    display: block;
+
+    width: 100%;
+    max-width: 100%;
+
+    margin-top: 3px;
+
+    overflow: hidden;
+
+    color: #9292a5;
+
+    font-size: 11px;
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* ==================================================
+   FLECHA DE CUENTA
+================================================== */
+
+.flecha-cuenta {
+    flex-shrink: 0;
+
+    margin-left: auto;
+
+    color: #b6b6c4;
+
+    font-size: 26px;
+    line-height: 1;
+
+    transition: transform 0.25s;
+}
+
+.flecha-cuenta.girada {
+    transform: rotate(90deg);
+}
+
+/* ==================================================
+   MENÚ DESPLEGABLE
+================================================== */
+
+.menu-cuenta {
+    position: absolute;
+
+    left: 0;
+    bottom: 72px;
+
+    width: 100%;
+    max-width: 100%;
+
+    padding: 10px;
+
+    display: none;
+
+    border: 1px solid #323244;
+    border-radius: 15px;
+
+    background: #151520;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 18px 45px rgba(0, 0, 0, 0.5),
+        0 0 20px rgba(83, 102, 255, 0.08);
+
+    z-index: 2000;
+}
+
+.menu-cuenta.mostrar {
+    display: block;
+
+    animation:
+        aparecerMenuCuenta 0.2s ease;
+}
+
+@keyframes aparecerMenuCuenta {
+
+    from {
+        opacity: 0;
+
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+
+}
+
+/* ==================================================
+   ENCABEZADO DEL MENÚ DESPLEGABLE
+================================================== */
+
+.menu-cuenta-encabezado {
+    width: 100%;
+
+    padding: 9px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 11px;
+
+    overflow: hidden;
+}
+
+.menu-cuenta-encabezado div:last-child {
+    min-width: 0;
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+}
+
+.menu-cuenta-encabezado strong {
+    display: block;
+
+    width: 100%;
+    max-width: 100%;
+
+    overflow: hidden;
+
+    color: #ffffff;
+
+    font-size: 13px;
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.menu-cuenta-encabezado span {
+    display: block;
+
+    width: 100%;
+    max-width: 100%;
+
+    margin-top: 4px;
+
+    overflow: hidden;
+
+    color: #8e8e9f;
+
+    font-size: 11px;
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* ==================================================
+   SEPARADOR
+================================================== */
+
+.separador-cuenta {
+    height: 1px;
+
+    margin: 8px 5px;
+
+    background: rgba(255, 255, 255, 0.08);
+}
+
+/* ==================================================
+   OPCIONES DE CUENTA
+================================================== */
+
+.opcion-cuenta {
+    width: 100%;
+
+    padding: 11px 12px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 11px;
+
+    border-radius: 9px;
+
+    color: #dcdce5;
+
+    font-size: 14px;
+
+    text-decoration: none;
+
+    transition: 0.2s;
+}
+
+.opcion-cuenta:hover {
+    background: rgba(255, 255, 255, 0.07);
+
+    color: #ffffff;
+}
+
+.icono-cuenta {
+    width: 23px;
+    flex-shrink: 0;
+
+    display: flex;
+    justify-content: center;
+
+    font-size: 17px;
+}
+
+.cerrar-cuenta {
+    color: #ff8299;
+}
+
+.cerrar-cuenta:hover {
+    background: rgba(255, 63, 98, 0.12);
+
+    color: #ff9aac;
+}
+
+/* ==================================================
+   TÍTULOS DE SECCIÓN
+================================================== */
+
+.titulo-seccion-dashboard {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+    margin-bottom: 22px;
+}
+
+.titulo-seccion-dashboard h2 {
+    margin-bottom: 6px;
+}
+
+.titulo-seccion-dashboard p {
+    color: #9ca3af;
+
+    font-size: 14px;
+}
+
+.boton-panel {
+    min-height: 40px;
+
+    padding: 0 17px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 9px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #00e5ff,
+            #7c3aed
+        );
+
+    color: #ffffff;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    white-space: nowrap;
+
+    transition: 0.3s ease;
+}
+
+.boton-panel:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 7px 20px rgba(0, 229, 255, 0.22);
+}
+
+/* ==================================================
+   ALERTAS DE STOCK
+================================================== */
+
+.lista-alertas-dashboard {
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+.alerta-dashboard {
+    padding: 12px 14px;
+
+    display: grid;
+    grid-template-columns:
+        48px
+        minmax(150px, 1fr)
+        auto
+        auto;
+
+    align-items: center;
+
+    gap: 14px;
+
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 11px;
+
+    background: rgba(255, 255, 255, 0.025);
+}
+
+.imagen-alerta-dashboard {
+    width: 42px;
+    height: 58px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    border-radius: 6px;
+
+    background: #0b1120;
+
+    font-size: 18px;
+}
+
+.imagen-alerta-dashboard img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.informacion-alerta-dashboard strong {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #ffffff;
+
+    font-size: 14px;
+}
+
+.informacion-alerta-dashboard p {
+    margin: 0;
+
+    color: #9ca3af;
+
+    font-size: 12px;
+}
+
+.alerta-bajo,
+.alerta-agotado {
+    min-width: 82px;
+
+    padding: 6px 10px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 20px;
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.alerta-bajo {
+    background: rgba(245, 158, 11, 0.14);
+
+    color: #fbbf24;
+}
+
+.alerta-agotado {
+    background: rgba(239, 68, 68, 0.13);
+
+    color: #f87171;
+}
+
+.boton-modificar-alerta {
+    padding: 8px 12px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(0, 229, 255, 0.35);
+    border-radius: 8px;
+
+    background: rgba(0, 229, 255, 0.08);
+
+    color: #67e8f9;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition: 0.25s ease;
+}
+
+.boton-modificar-alerta:hover {
+    background: #00e5ff;
+
+    color: #07111f;
+}
+
+/* ==================================================
+   SIN ALERTAS
+================================================== */
+
+.sin-alertas-dashboard {
+    padding: 40px 20px;
+
+    border: 1px dashed rgba(34, 197, 94, 0.25);
+    border-radius: 12px;
+
+    background: rgba(34, 197, 94, 0.04);
+
+    text-align: center;
+}
+
+.sin-alertas-dashboard span {
+    display: block;
+
+    margin-bottom: 10px;
+
+    font-size: 32px;
+}
+
+.sin-alertas-dashboard strong {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: #ffffff;
+
+    font-size: 16px;
+}
+
+.sin-alertas-dashboard p {
+    color: #9ca3af;
+
+    font-size: 13px;
+}
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (max-width: 1100px) {
+
+    .tarjetas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .modulos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+/* ==================================================
+   CELULARES
+================================================== */
+
+@media (max-width: 720px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .contenedor {
+        display: block;
+    }
+
+    .menu-lateral {
+        position: relative;
+
+        top: auto;
+        left: auto;
+
+        width: 100%;
+        height: auto;
+        min-height: auto;
+
+        padding: 22px 18px;
+
+        overflow: visible;
+
+        border-right: none;
+        border-bottom: 1px solid #31223f;
+    }
+
+    .contenido {
+        width: 100%;
+
+        margin-left: 0;
+        padding: 25px 18px;
+    }
+
+    .logo {
+        margin-bottom: 22px;
+    }
+
+    .navegacion {
+        flex: none;
+    }
+
+    .zona-cuenta {
+        margin-top: 20px;
+    }
+
+    .menu-cuenta {
+        left: 0;
+        bottom: 72px;
+
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .tarjetas,
+    .modulos {
+        grid-template-columns: 1fr;
+    }
+
+    .encabezado {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .titulo-seccion-dashboard {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .alerta-dashboard {
+        grid-template-columns: 48px 1fr;
+    }
+
+    .alerta-bajo,
+    .alerta-agotado,
+    .boton-modificar-alerta {
+        grid-column: 2;
+
+        width: fit-content;
+    }
+
+}
+
+/* ==================================================
+   PANTALLAS PEQUEÑAS
+================================================== */
+
+@media (max-width: 500px) {
+
+    .contenido {
+        padding: 20px 14px;
+    }
+
+    .panel-bienvenida {
+        padding: 22px 17px;
+    }
+
+    .encabezado h1 {
+        font-size: 27px;
+    }
+
+    .boton-panel {
+        width: 100%;
+    }
+
+}

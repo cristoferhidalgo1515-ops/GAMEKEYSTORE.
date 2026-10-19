@@ -1,0 +1,310 @@
+/* ==================================================
+   PÁGINA DE PERFIL DEL ADMINISTRADOR
+================================================== */
+
+.perfil-grid {
+    display: grid;
+    grid-template-columns: 290px minmax(0, 1fr);
+    gap: 22px;
+    margin-bottom: 25px;
+}
+
+/* Panel izquierdo */
+
+.panel-perfil {
+    padding: 28px 22px;
+    border: 1px solid #30263f;
+    border-radius: 16px;
+
+    background:
+        radial-gradient(
+            circle at top,
+            rgba(223, 28, 173, 0.13),
+            transparent 40%
+        ),
+        rgba(12, 12, 21, 0.96);
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.22);
+}
+
+.perfil-cabecera {
+    text-align: center;
+}
+
+.avatar {
+    width: 95px;
+    height: 95px;
+    margin: 0 auto 17px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 2px solid rgba(255, 255, 255, 0.12);
+    border-radius: 50%;
+
+    background: linear-gradient(
+        135deg,
+        #df1cad,
+        #5366ff
+    );
+
+    color: white;
+    font-size: 42px;
+    font-weight: bold;
+
+    box-shadow:
+        0 0 20px rgba(223, 28, 173, 0.34),
+        0 0 35px rgba(83, 102, 255, 0.2);
+}
+
+.perfil-cabecera h2 {
+    margin-bottom: 7px;
+    color: #ffffff;
+    font-size: 22px;
+}
+
+.perfil-cabecera p {
+    display: inline-block;
+    padding: 6px 12px;
+
+    border: 1px solid rgba(255, 47, 195, 0.3);
+    border-radius: 20px;
+
+    background: rgba(255, 47, 195, 0.1);
+    color: #ff67d3;
+
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.datos-cuenta {
+    margin-top: 25px;
+    padding-top: 22px;
+    border-top: 1px solid #30303f;
+}
+
+.datos-cuenta p {
+    margin-bottom: 15px;
+    color: #bcbccc;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+.datos-cuenta strong {
+    display: block;
+    margin-bottom: 4px;
+    color: #f1f1f5;
+    font-size: 13px;
+}
+
+/* Panel del formulario */
+
+.panel-formulario,
+.panel-contrasena {
+    padding: 28px;
+    border: 1px solid #30263f;
+    border-radius: 16px;
+
+    background: rgba(12, 12, 21, 0.96);
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.22);
+}
+
+.panel-formulario h2,
+.panel-contrasena h2 {
+    margin-bottom: 22px;
+    color: #ffffff;
+    font-size: 23px;
+}
+
+.panel-contrasena {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.panel-contrasena > p {
+    margin-top: -12px;
+    margin-bottom: 24px;
+    color: #9d9daf;
+    line-height: 1.6;
+}
+
+/* Campos */
+
+.grupo-doble {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.campo {
+    margin-bottom: 20px;
+}
+
+.campo label {
+    display: block;
+    margin-bottom: 8px;
+
+    color: #ececf2;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.campo input,
+.campo textarea {
+    width: 100%;
+    padding: 13px 14px;
+
+    border: 1px solid #36364a;
+    border-radius: 9px;
+
+    outline: none;
+    background: #11111b;
+    color: #ffffff;
+
+    font-size: 15px;
+    transition: 0.25s;
+}
+
+.campo textarea {
+    min-height: 95px;
+    resize: vertical;
+}
+
+.campo input::placeholder,
+.campo textarea::placeholder {
+    color: #6f6f80;
+}
+
+.campo input:hover,
+.campo textarea:hover {
+    border-color: #4b4b61;
+}
+
+.campo input:focus,
+.campo textarea:focus {
+    border-color: #ff2fc3;
+
+    box-shadow:
+        0 0 0 3px rgba(255, 47, 195, 0.1),
+        0 0 12px rgba(255, 47, 195, 0.16);
+}
+
+/* Botones */
+
+.boton-guardar,
+.boton-contrasena {
+    width: 100%;
+    padding: 13px 18px;
+
+    border: none;
+    border-radius: 9px;
+
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.boton-guardar {
+    background: linear-gradient(
+        90deg,
+        #df1cad,
+        #5366ff
+    );
+}
+
+.boton-contrasena {
+    background: linear-gradient(
+        90deg,
+        #b52b58,
+        #7739cd
+    );
+}
+
+.boton-guardar:hover,
+.boton-contrasena:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(83, 102, 255, 0.2),
+        0 0 15px rgba(223, 28, 173, 0.2);
+}
+
+.boton-guardar:active,
+.boton-contrasena:active {
+    transform: translateY(0);
+}
+
+.boton-volver {
+    display: inline-block;
+    padding: 10px 16px;
+
+    border: 1px solid #5868ff;
+    border-radius: 8px;
+
+    background: rgba(88, 104, 255, 0.1);
+    color: #b3baff;
+
+    text-decoration: none;
+    transition: 0.25s;
+}
+
+.boton-volver:hover {
+    background: rgba(88, 104, 255, 0.18);
+    box-shadow: 0 0 12px rgba(88, 104, 255, 0.18);
+}
+
+/* Mensaje de resultado */
+
+.mensaje-perfil {
+    margin-bottom: 20px;
+    padding: 13px 16px;
+
+    border: 1px solid #5366d9;
+    border-radius: 9px;
+
+    background: rgba(83, 102, 217, 0.11);
+    color: #bec5ff;
+
+    line-height: 1.5;
+}
+
+/* Adaptación para pantallas pequeñas */
+
+@media (max-width: 950px) {
+    .perfil-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .panel-perfil {
+        max-width: none;
+    }
+
+    .datos-cuenta {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+    }
+}
+
+@media (max-width: 700px) {
+    .grupo-doble {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .datos-cuenta {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .panel-perfil,
+    .panel-formulario,
+    .panel-contrasena {
+        padding: 22px 18px;
+    }
+}

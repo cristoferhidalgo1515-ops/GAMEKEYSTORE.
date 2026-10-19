@@ -1,0 +1,320 @@
+/* ==================================================
+   PÁGINA DE PLATAFORMAS
+================================================== */
+
+.encabezado-plataformas {
+    margin-bottom: 24px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.encabezado-plataformas h1 {
+    margin-bottom: 7px;
+
+    color: #ffffff;
+    font-size: 30px;
+}
+
+.encabezado-plataformas p {
+    color: #9696a8;
+}
+
+.boton-nueva-plataforma {
+    padding: 11px 18px;
+
+    border-radius: 9px;
+
+    background: linear-gradient(
+        90deg,
+        #df1cad,
+        #5366ff
+    );
+
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+
+    transition: 0.25s;
+}
+
+.boton-nueva-plataforma:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(83, 102, 255, 0.2),
+        0 0 15px rgba(223, 28, 173, 0.2);
+}
+
+/* ==================================================
+   MENSAJES
+================================================== */
+
+.mensaje-plataformas {
+    margin-bottom: 20px;
+    padding: 13px 16px;
+
+    border: 1px solid #5366d9;
+    border-radius: 9px;
+
+    background: rgba(83, 102, 217, 0.11);
+    color: #bec5ff;
+}
+
+/* ==================================================
+   PANEL PRINCIPAL
+================================================== */
+
+.panel-plataformas {
+    padding: 24px;
+
+    border: 1px solid #30263f;
+    border-radius: 15px;
+
+    background: rgba(12, 12, 21, 0.96);
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.22);
+}
+
+/* ==================================================
+   BUSCADOR
+================================================== */
+
+.formulario-busqueda-plataforma {
+    margin-bottom: 22px;
+
+    display: flex;
+    gap: 10px;
+}
+
+.formulario-busqueda-plataforma input {
+    flex: 1;
+    padding: 12px 14px;
+
+    border: 1px solid #36364a;
+    border-radius: 8px;
+
+    outline: none;
+    background: #11111b;
+    color: #ffffff;
+
+    font-size: 14px;
+}
+
+.formulario-busqueda-plataforma input:focus {
+    border-color: #ff2fc3;
+
+    box-shadow:
+        0 0 0 3px rgba(255, 47, 195, 0.1);
+}
+
+.formulario-busqueda-plataforma button,
+.boton-limpiar-plataforma {
+    padding: 11px 17px;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.formulario-busqueda-plataforma button {
+    border: none;
+
+    background: #5366ff;
+    color: #ffffff;
+}
+
+.formulario-busqueda-plataforma button:hover {
+    background: #6575ff;
+}
+
+.boton-limpiar-plataforma {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #4b4b61;
+
+    background: transparent;
+    color: #c5c5d0;
+}
+
+.boton-limpiar-plataforma:hover {
+    border-color: #65657d;
+    color: #ffffff;
+}
+
+/* ==================================================
+   TABLA
+================================================== */
+
+.tabla-plataformas-contenedor {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.tabla-plataformas {
+    width: 100%;
+
+    border-collapse: collapse;
+}
+
+.tabla-plataformas thead {
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.tabla-plataformas th,
+.tabla-plataformas td {
+    padding: 14px 12px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+
+    text-align: left;
+    vertical-align: middle;
+}
+
+.tabla-plataformas th {
+    color: #aeb1c4;
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.tabla-plataformas td {
+    color: #d8d8e0;
+
+    font-size: 14px;
+}
+
+.tabla-plataformas tbody tr {
+    transition: 0.2s;
+}
+
+.tabla-plataformas tbody tr:hover {
+    background: rgba(255, 255, 255, 0.025);
+}
+
+.nombre-plataforma {
+    color: #ffffff !important;
+    font-weight: bold;
+}
+
+/* ==================================================
+   ESTADOS
+================================================== */
+
+.estado-plataforma {
+    display: inline-block;
+    padding: 5px 10px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.estado-plataforma.activa {
+    border: 1px solid rgba(43, 212, 139, 0.3);
+
+    background: rgba(43, 212, 139, 0.12);
+    color: #66e5ad;
+}
+
+.estado-plataforma.inactiva {
+    border: 1px solid rgba(255, 87, 116, 0.3);
+
+    background: rgba(255, 87, 116, 0.12);
+    color: #ff899e;
+}
+
+/* ==================================================
+   BOTONES DE ACCIÓN
+================================================== */
+
+.acciones-plataforma {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.acciones-plataforma form {
+    margin: 0;
+}
+
+.boton-editar-plataforma,
+.boton-estado-plataforma {
+    padding: 7px 11px;
+
+    border-radius: 7px;
+
+    font-size: 12px;
+    text-decoration: none;
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.boton-editar-plataforma {
+    border: 1px solid rgba(83, 102, 255, 0.45);
+
+    background: rgba(83, 102, 255, 0.12);
+    color: #aeb7ff;
+}
+
+.boton-editar-plataforma:hover {
+    background: rgba(83, 102, 255, 0.22);
+}
+
+.boton-estado-plataforma {
+    border: 1px solid rgba(255, 65, 99, 0.35);
+
+    background: rgba(255, 65, 99, 0.09);
+    color: #ff8ba0;
+}
+
+.boton-estado-plataforma:hover {
+    background: rgba(255, 65, 99, 0.18);
+}
+
+/* ==================================================
+   SIN RESULTADOS
+================================================== */
+
+.sin-plataformas {
+    padding: 30px !important;
+
+    color: #8f8f9f !important;
+    text-align: center !important;
+}
+
+/* ==================================================
+   DISEÑO RESPONSIVO
+================================================== */
+
+@media (max-width: 700px) {
+
+    .encabezado-plataformas {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .boton-nueva-plataforma {
+        width: 100%;
+
+        text-align: center;
+    }
+
+    .formulario-busqueda-plataforma {
+        flex-direction: column;
+    }
+
+    .boton-limpiar-plataforma {
+        width: 100%;
+    }
+
+}

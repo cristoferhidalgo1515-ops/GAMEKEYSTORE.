@@ -1,0 +1,32 @@
+PÁGINA UNIFICADA - GAMEKEY STORE
+
+INSTALACIÓN EN XAMPP
+1. Copia la carpeta Pagina_Unificada dentro de C:\xampp\htdocs\.
+2. Inicia Apache y MySQL desde XAMPP.
+3. En phpMyAdmin importa gamekey_store.sql como base de datos gamekey_store.
+4. En phpMyAdmin importa modulo_3.sql como base de datos modulo_3.
+5. Antes de importar, haz una copia de seguridad si ya tienes bases con esos nombres. El SQL gamekey_store original incluye DROP DATABASE IF EXISTS gamekey_store y reemplaza esa base.
+6. Las conexiones por defecto usan localhost, usuario root y contraseña vacía. Si tu MySQL tiene otra contraseña, actualiza Modulo_1/config/conexion.php y modulo_3/config/conexion.php.
+7. Abre http://localhost/Pagina_Unificada/
+
+ACCESO
+- La primera cuenta abre el panel administrativo del Módulo 1.
+- La segunda cuenta abre la tienda GameKey Store.
+- La tercera cuenta abre el panel de gestión del Módulo 3.
+Las credenciales se verifican mediante hashes guardados en config/usuarios.php. Cada cuenta queda limitada a su módulo; el administrador del Módulo 1 también dispone de una vista de pedidos de solo lectura.
+
+FLUJO DE PEDIDOS
+- Desde la tienda, el cliente agrega juegos al carrito y pulsa Continuar compra.
+- En checkout.php escribe su nombre, método de pago y dirección/datos de entrega.
+- procesar_compra.php registra el pedido y los detalles en la base modulo_3. Los precios se validan en el servidor.
+- El administrador puede ver pedidos desde el menú Pedidos del panel del Módulo 1. El Módulo 3 mantiene su panel de pedidos, inventario, QR y facturas.
+- Los productos de la tienda que todavía no existían en el inventario del Módulo 3 se agregan con stock inicial de 10. Revisa y ajusta ese stock para que coincida con el inventario real antes de usarlo con clientes.
+
+RUTAS
+- Inicio de sesión: index.php
+- Módulo 1: Modulo_1/admin/dashboard.php
+- Tienda: gamekey_store/modulo2/index.php
+- Módulo 3: modulo_3/modulo3/dashboard.php
+
+NOTA DE PRUEBAS
+Este paquete integra el acceso central y el flujo básico de pedidos. Debe probarse en tu instalación de XAMPP, ya que no es posible validar desde aquí tu servidor MySQL local ni las extensiones configuradas en tu equipo. No lo publiques en Internet sin una revisión adicional de seguridad.

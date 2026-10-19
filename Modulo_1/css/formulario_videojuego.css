@@ -1,0 +1,371 @@
+/* ==================================================
+   ENCABEZADO
+================================================== */
+
+.encabezado-formulario-videojuego {
+    margin-bottom: 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.encabezado-formulario-videojuego h1 {
+    margin-bottom: 7px;
+
+    color: #ffffff;
+    font-size: 30px;
+}
+
+.encabezado-formulario-videojuego p {
+    color: #9696a8;
+}
+
+.boton-volver-videojuego {
+    padding: 11px 17px;
+
+    border: 1px solid #45455a;
+    border-radius: 9px;
+
+    background: transparent;
+    color: #d5d5df;
+
+    text-decoration: none;
+    font-weight: bold;
+
+    transition: 0.2s;
+}
+
+.boton-volver-videojuego:hover {
+    border-color: #6b6b82;
+    color: #ffffff;
+}
+
+/* ==================================================
+   MENSAJE
+================================================== */
+
+.mensaje-formulario-videojuego {
+    margin-bottom: 20px;
+    padding: 13px 16px;
+
+    border: 1px solid #5366d9;
+    border-radius: 9px;
+
+    background: rgba(83, 102, 217, 0.11);
+    color: #bec5ff;
+}
+
+/* ==================================================
+   PANEL Y FORMULARIO
+================================================== */
+
+.panel-formulario-videojuego {
+    padding: 26px;
+
+    border: 1px solid #30263f;
+    border-radius: 15px;
+
+    background: rgba(12, 12, 21, 0.96);
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.22);
+}
+
+#formularioVideojuego {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 310px;
+    gap: 30px;
+}
+
+.seccion-formulario-videojuego,
+.seccion-imagen-videojuego {
+    min-width: 0;
+}
+
+.seccion-formulario-videojuego h2,
+.seccion-imagen-videojuego h2 {
+    margin-bottom: 20px;
+
+    color: #ffffff;
+    font-size: 18px;
+}
+
+/* ==================================================
+   CAMPOS
+================================================== */
+
+.campo-videojuego {
+    margin-bottom: 19px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.campo-videojuego label {
+    color: #d8d8e2;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.campo-videojuego input,
+.campo-videojuego textarea,
+.campo-videojuego select {
+    width: 100%;
+    padding: 12px 14px;
+
+    border: 1px solid #36364a;
+    border-radius: 9px;
+
+    outline: none;
+
+    background: #11111b;
+    color: #ffffff;
+
+    font-family: inherit;
+    font-size: 14px;
+
+    transition: 0.2s;
+}
+
+.campo-videojuego input:focus,
+.campo-videojuego textarea:focus,
+.campo-videojuego select:focus {
+    border-color: #ff2fc3;
+
+    box-shadow:
+        0 0 0 3px rgba(255, 47, 195, 0.1);
+}
+
+.campo-videojuego textarea {
+    min-height: 130px;
+
+    resize: vertical;
+}
+
+.campo-videojuego select {
+    cursor: pointer;
+}
+
+.campo-videojuego small {
+    color: #838397;
+
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.campo-videojuego input[type="file"] {
+    padding: 10px;
+
+    cursor: pointer;
+}
+
+.campo-videojuego input[type="file"]::file-selector-button {
+    margin-right: 12px;
+    padding: 8px 12px;
+
+    border: none;
+    border-radius: 7px;
+
+    background: #5366ff;
+    color: #ffffff;
+
+    cursor: pointer;
+}
+
+.fila-formulario-videojuego {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+/* ==================================================
+   VISTA PREVIA
+================================================== */
+
+.seccion-imagen-videojuego {
+    padding-left: 28px;
+
+    border-left: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.vista-previa-videojuego {
+    width: 100%;
+    height: 370px;
+    margin-bottom: 20px;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    border: 2px dashed #414156;
+    border-radius: 14px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(83, 102, 255, 0.07),
+            rgba(223, 28, 173, 0.07)
+        );
+}
+
+.vista-previa-videojuego img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.imagen-previa-oculta {
+    display: none;
+}
+
+.marcador-imagen-videojuego {
+    padding: 20px;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 12px;
+
+    color: #8f8fa2;
+    text-align: center;
+}
+
+.marcador-imagen-videojuego span {
+    font-size: 50px;
+}
+
+.marcador-imagen-videojuego p {
+    font-size: 14px;
+}
+
+/* ==================================================
+   BOTONES
+================================================== */
+
+.acciones-formulario-videojuego {
+    grid-column: 1 / -1;
+
+    padding-top: 22px;
+
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.boton-cancelar-videojuego,
+.boton-guardar-videojuego {
+    padding: 12px 20px;
+
+    border-radius: 9px;
+
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: bold;
+
+    text-decoration: none;
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.boton-cancelar-videojuego {
+    border: 1px solid #49495e;
+
+    background: transparent;
+    color: #c5c5d0;
+}
+
+.boton-cancelar-videojuego:hover {
+    border-color: #686880;
+    color: #ffffff;
+}
+
+.boton-guardar-videojuego {
+    border: none;
+
+    background: linear-gradient(
+        90deg,
+        #df1cad,
+        #5366ff
+    );
+
+    color: #ffffff;
+}
+
+.boton-guardar-videojuego:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(83, 102, 255, 0.2),
+        0 0 15px rgba(223, 28, 173, 0.2);
+}
+
+/* ==================================================
+   RESPONSIVO
+================================================== */
+
+@media (max-width: 1000px) {
+
+    #formularioVideojuego {
+        grid-template-columns: 1fr;
+    }
+
+    .seccion-imagen-videojuego {
+        padding-top: 25px;
+        padding-left: 0;
+
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        border-left: none;
+    }
+
+    .vista-previa-videojuego {
+        max-width: 320px;
+    }
+
+}
+
+@media (max-width: 700px) {
+
+    .encabezado-formulario-videojuego {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .boton-volver-videojuego {
+        width: 100%;
+
+        text-align: center;
+    }
+
+    .panel-formulario-videojuego {
+        padding: 18px;
+    }
+
+    .fila-formulario-videojuego {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .acciones-formulario-videojuego {
+        flex-direction: column-reverse;
+    }
+
+    .boton-cancelar-videojuego,
+    .boton-guardar-videojuego {
+        width: 100%;
+
+        text-align: center;
+    }
+
+}

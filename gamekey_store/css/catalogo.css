@@ -1,0 +1,441 @@
+/* =========================================
+   CATÁLOGO - GAMEKEY STORE
+========================================= */
+
+.pagina-catalogo {
+    min-height: 100vh;
+}
+
+
+/* =========================================
+   ENCABEZADO DEL CATÁLOGO
+========================================= */
+
+.encabezado-catalogo {
+    padding: 38px 6% 28px;
+
+    border-bottom: 1px solid var(--borde);
+
+    background:
+        radial-gradient(
+            circle at top right,
+            rgba(164, 61, 255, 0.18),
+            transparent 35%
+        ),
+        #070812;
+}
+
+.subtitulo-catalogo {
+    margin-bottom: 7px;
+
+    color: var(--rosado);
+
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.encabezado-catalogo h2 {
+    margin-bottom: 10px;
+
+    font-size: clamp(30px, 4vw, 44px);
+}
+
+.encabezado-catalogo p {
+    color: var(--texto-suave);
+}
+
+
+/* =========================================
+   ÁREA PRINCIPAL
+========================================= */
+
+.zona-catalogo {
+    width: 100%;
+
+    padding: 32px 6% 55px;
+
+    display: grid;
+
+    grid-template-columns: 235px minmax(0, 1fr);
+
+    gap: 28px;
+}
+
+
+/* =========================================
+   FILTROS
+========================================= */
+
+.panel-filtros {
+    width: 100%;
+    height: fit-content;
+
+    padding: 20px;
+
+    position: sticky;
+    top: 90px;
+
+    background: var(--tarjeta);
+
+    border: 1px solid var(--borde);
+    border-radius: 8px;
+}
+
+.panel-filtros h3 {
+    margin-bottom: 20px;
+
+    color: var(--rosado);
+}
+
+.grupo-filtro {
+    margin-bottom: 18px;
+}
+
+.grupo-filtro label {
+    margin-bottom: 7px;
+
+    display: block;
+
+    color: #dce0ea;
+
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.grupo-filtro input,
+.grupo-filtro select {
+    width: 100%;
+    height: 40px;
+
+    padding: 0 11px;
+
+    background: #080a13;
+
+    border: 1px solid var(--borde);
+    border-radius: 5px;
+
+    color: white;
+
+    outline: none;
+}
+
+.grupo-filtro input:focus,
+.grupo-filtro select:focus {
+    border-color: var(--morado);
+}
+
+.boton-limpiar {
+    width: 100%;
+
+    padding: 11px;
+
+    background: transparent;
+
+    border: 1px solid var(--azul);
+    border-radius: 5px;
+
+    color: white;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.boton-limpiar:hover {
+    background: var(--azul);
+}
+
+
+/* =========================================
+   CONTENIDO DEL CATÁLOGO
+========================================= */
+
+.contenido-catalogo {
+    width: 100%;
+    min-width: 0;
+}
+
+.barra-resultados {
+    width: 100%;
+
+    margin-bottom: 18px;
+
+    padding: 13px 16px;
+
+    background: var(--tarjeta);
+
+    border: 1px solid var(--borde);
+    border-radius: 7px;
+
+    color: var(--texto-suave);
+}
+
+.barra-resultados strong {
+    color: var(--rosado);
+}
+
+
+/* =========================================
+   CUADRÍCULA DE VIDEOJUEGOS
+========================================= */
+
+.cuadricula-catalogo {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 20px;
+}
+
+
+/* =========================================
+   TARJETA DEL VIDEOJUEGO
+========================================= */
+
+.producto-catalogo {
+    width: 100%;
+    min-width: 0;
+
+    overflow: hidden;
+
+    background: var(--tarjeta);
+
+    border: 1px solid var(--borde);
+    border-radius: 8px;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.producto-catalogo:hover {
+    transform: translateY(-5px);
+
+    border-color: var(--morado);
+
+    box-shadow:
+        0 8px 25px
+        rgba(164, 61, 255, 0.16);
+}
+
+
+/* =========================================
+   PORTADA
+========================================= */
+
+.portada-catalogo {
+    width: 100%;
+    height: 310px;
+
+    padding: 0;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background: #080a13;
+}
+
+.portada-catalogo img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+    object-position: center;
+
+    transition: transform 0.35s ease;
+}
+
+.producto-catalogo:hover
+.portada-catalogo img {
+    transform: scale(1.05);
+}
+
+
+/* =========================================
+   ETIQUETA DE PLATAFORMA
+========================================= */
+
+.etiqueta-plataforma {
+    padding: 5px 8px;
+
+    position: absolute;
+
+    top: 10px;
+    left: 10px;
+
+    z-index: 5;
+
+    border-radius: 4px;
+
+    color: white;
+
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.ps {
+    background: #1556b8;
+}
+
+.pc {
+    background: #168a48;
+}
+
+.xbox {
+    background: #117d37;
+}
+
+
+/* =========================================
+   INFORMACIÓN DEL PRODUCTO
+========================================= */
+
+.datos-producto {
+    padding: 15px;
+}
+
+.tipo-producto {
+    margin-bottom: 7px;
+
+    color: var(--azul);
+
+    font-size: 11px;
+    font-weight: bold;
+
+    text-transform: uppercase;
+}
+
+.datos-producto h3 {
+    min-height: 38px;
+
+    margin-bottom: 8px;
+
+    font-size: 16px;
+}
+
+.descripcion-producto {
+    min-height: 52px;
+
+    margin-bottom: 14px;
+
+    color: var(--texto-suave);
+
+    font-size: 12px;
+
+    line-height: 1.45;
+}
+
+
+/* =========================================
+   PRECIO Y DETALLE
+========================================= */
+
+.pie-producto {
+    margin-bottom: 12px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 10px;
+}
+
+.precio-producto {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.boton-detalle {
+    color: var(--rosado);
+
+    font-size: 12px;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.boton-detalle:hover {
+    text-shadow: 0 0 8px var(--rosado);
+}
+
+
+/* =========================================
+   BOTÓN AGREGAR AL CARRITO
+========================================= */
+
+.agregar-catalogo {
+    width: 100%;
+}
+
+
+/* =========================================
+   SIN RESULTADOS
+========================================= */
+
+.sin-resultados {
+    display: none;
+
+    margin-top: 25px;
+
+    padding: 25px;
+
+    text-align: center;
+
+    background: var(--tarjeta);
+
+    border: 1px solid var(--borde);
+    border-radius: 8px;
+
+    color: var(--texto-suave);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+
+    .cuadricula-catalogo {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+/* =========================================
+   TELÉFONO
+========================================= */
+
+@media (max-width: 780px) {
+
+    .zona-catalogo {
+        padding: 25px 5%;
+
+        grid-template-columns: 1fr;
+    }
+
+    .panel-filtros {
+        position: static;
+    }
+
+    .cuadricula-catalogo {
+        grid-template-columns: 1fr;
+    }
+
+    .portada-catalogo {
+        height: 390px;
+    }
+
+}

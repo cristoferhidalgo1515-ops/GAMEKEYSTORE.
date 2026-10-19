@@ -1,0 +1,407 @@
+/* =========================================
+   PÁGINA DE CATEGORÍAS
+========================================= */
+
+.pagina-categorias {
+    min-height: 100vh;
+}
+
+
+/* =========================================
+   PRESENTACIÓN
+========================================= */
+
+.encabezado-categorias {
+    padding: 55px 7% 45px;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at top center,
+            rgba(164, 61, 255, 0.20),
+            transparent 42%
+        ),
+        #070812;
+
+    border-bottom: 1px solid var(--borde);
+}
+
+.subtitulo-categorias {
+    margin-bottom: 9px;
+
+    color: var(--rosado);
+
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.encabezado-categorias h1 {
+    margin-bottom: 12px;
+
+    font-size: clamp(32px, 5vw, 50px);
+}
+
+.descripcion-categorias {
+    color: var(--texto-suave);
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   CONTENEDOR
+========================================= */
+
+.contenedor-categorias {
+    padding: 40px 7% 60px;
+}
+
+
+/* =========================================
+   CUADRÍCULA
+========================================= */
+
+.cuadricula-categorias {
+    max-width: 1150px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 22px;
+}
+
+
+/* =========================================
+   TARJETAS
+========================================= */
+
+.tarjeta-categoria {
+    min-height: 280px;
+
+    padding: 25px;
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(22, 25, 40, 0.95),
+            rgba(9, 11, 20, 0.95)
+        );
+
+    border: 1px solid var(--borde);
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    transition: 0.3s;
+}
+
+.tarjeta-categoria::before {
+    content: "";
+
+    width: 130px;
+    height: 130px;
+
+    position: absolute;
+
+    top: -60px;
+    right: -60px;
+
+    background:
+        rgba(164, 61, 255, 0.18);
+
+    border-radius: 50%;
+
+    filter: blur(5px);
+}
+
+.tarjeta-categoria:hover {
+    transform: translateY(-6px);
+
+    border-color: var(--morado);
+
+    box-shadow:
+        0 12px 30px
+        rgba(164, 61, 255, 0.15);
+}
+
+
+/* =========================================
+   ICONO
+========================================= */
+
+.icono-categoria {
+    width: 55px;
+    height: 55px;
+
+    margin-bottom: 18px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background:
+        rgba(164, 61, 255, 0.12);
+
+    border:
+        1px solid
+        rgba(164, 61, 255, 0.35);
+
+    border-radius: 10px;
+
+    font-size: 27px;
+}
+
+
+/* =========================================
+   TEXTO
+========================================= */
+
+.tarjeta-categoria h2 {
+    margin-bottom: 9px;
+
+    font-size: 21px;
+}
+
+.tarjeta-categoria p {
+    margin-bottom: 15px;
+
+    color: var(--texto-suave);
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+.tarjeta-categoria > span {
+    margin-bottom: 20px;
+
+    display: block;
+
+    color: var(--azul);
+
+    font-size: 11px;
+    font-weight: bold;
+}
+
+
+/* =========================================
+   BOTÓN
+========================================= */
+
+.boton-categoria {
+    width: 100%;
+
+    margin-top: auto;
+
+    padding: 11px;
+
+    background: transparent;
+
+    border: 1px solid var(--morado);
+    border-radius: 5px;
+
+    color: white;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.boton-categoria:hover {
+    background:
+        linear-gradient(
+            90deg,
+            var(--morado),
+            var(--rosado)
+        );
+
+    border-color: transparent;
+}
+
+
+/* =========================================
+   CATÁLOGO COMPLETO
+========================================= */
+
+.zona-todos {
+    max-width: 1150px;
+
+    margin: 35px auto 0;
+
+    padding: 25px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    background: var(--tarjeta);
+
+    border: 1px solid var(--borde);
+    border-radius: 8px;
+}
+
+.zona-todos p {
+    color: var(--texto-suave);
+
+    font-size: 14px;
+}
+
+.boton-todos {
+    padding: 11px 18px;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--morado),
+            var(--rosado)
+        );
+
+    border-radius: 5px;
+
+    color: white;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    white-space: nowrap;
+
+    transition: 0.3s;
+}
+
+.boton-todos:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 0 18px
+        rgba(255, 25, 200, 0.25);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .cuadricula-categorias {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+/* =========================================
+   TELÉFONO
+========================================= */
+
+@media (max-width: 600px) {
+
+    .contenedor-categorias {
+        padding:
+            30px 5% 45px;
+    }
+
+    .cuadricula-categorias {
+        grid-template-columns: 1fr;
+    }
+
+    .zona-todos {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+}
+
+/* =========================================
+   CORRECCIÓN DE CONFLICTOS CON estilos.css
+========================================= */
+
+.pagina-categorias .contenedor-categorias {
+    display: block;
+    width: 100%;
+}
+
+.pagina-categorias .cuadricula-categorias {
+    width: 100%;
+    max-width: 1150px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 22px;
+}
+
+.pagina-categorias .tarjeta-categoria {
+    width: 100%;
+    min-height: 280px;
+
+    padding: 25px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: stretch;
+    justify-content: flex-start;
+
+    gap: 0;
+
+    text-align: left;
+}
+
+.pagina-categorias .icono-categoria {
+    flex-shrink: 0;
+}
+
+.pagina-categorias .zona-todos {
+    width: 100%;
+    max-width: 1150px;
+
+    margin: 35px auto 0;
+}
+
+
+/* TABLET */
+
+@media (max-width: 900px) {
+
+    .pagina-categorias .cuadricula-categorias {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+/* TELÉFONO */
+
+@media (max-width: 600px) {
+
+    .pagina-categorias .cuadricula-categorias {
+        grid-template-columns: 1fr;
+    }
+
+}
